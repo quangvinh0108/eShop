@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Mobile Store</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <h2>Đăng nhập</h2>
+    
+    <!-- Hiển thị thông báo nếu có -->
+    <div id="message"></div>
+
+    <form action="../backend/login/login.php" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="password">Mật khẩu:</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">Đăng nhập</button>
+    </form>
+
+    <p>Chưa có tài khoản? <a href="../frontend/login/register.html">Đăng ký ngay</a></p>
+    <p><a href="forgot_password.html">Quên mật khẩu?</a></p>
+
+    <script>
+        // Kiểm tra nếu có thông báo từ đăng ký
+        const params = new URLSearchParams(window.location.search);
+        if (params.has("success")) {
+            document.getElementById("message").innerHTML = "<p style='color: green;'>Đăng ký thành công! Hãy đăng nhập.</p>";
+        }
+    </script>
+</body>
+</html>
