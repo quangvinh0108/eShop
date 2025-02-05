@@ -1,0 +1,104 @@
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0073e6;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Dropdown danh mục */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    top: 30px;
+    left: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    min-width: 120px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 8px;
+}
+
+.dropdown-menu li a {
+    color: black;
+}
+
+/* Ô tìm kiếm */
+.search-form {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search-form input {
+    border: none;
+    padding: 5px;
+    outline: none;
+}
+
+.search-form button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* User menu */
+.user-menu {
+    position: relative;
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    background: white;
+    top: 30px;
+    right: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    text-align: left;
+}
+
+.user-menu:hover .user-dropdown {
+    display: block;
+}
+
+.user-dropdown li {
+    padding: 10px;
+}
+
+.user-dropdown li a {
+    color: black;
+    display: block;
+}
