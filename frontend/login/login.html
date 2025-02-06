@@ -4,32 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập - Mobile Store</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="frontend/style.css">
 </head>
 <body>
-    <h2>Đăng nhập</h2>
-    
-    <!-- Hiển thị thông báo nếu có -->
-    <div id="message"></div>
+    <div class="login-container">
+        <h2>Đăng nhập</h2>
 
-    <form action="../backend/login/login.php" method="POST">
-        <label for="email">Email:</label>
-        <input type="email" name="email" required>
+        <!-- Hiển thị thông báo nếu có -->
+        <div id="message"></div>
 
-        <label for="password">Mật khẩu:</label>
-        <input type="password" name="password" required>
+        <form action="backend/login/login.php" method="POST" class="login-form">
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="Nhập email" required>
+            </div>
 
-        <button type="submit">Đăng nhập</button>
-    </form>
+            <div class="input-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" name="password" placeholder="Nhập mật khẩu" required>
+            </div>
 
-    <p>Chưa có tài khoản? <a href="../frontend/login/register.html">Đăng ký ngay</a></p>
-    <p><a href="forgot_password.html">Quên mật khẩu?</a></p>
+            <button type="submit" class="login-btn">Đăng nhập</button>
+        </form>
+
+        <div class="links">
+            <p>Chưa có tài khoản? <a href="frontend/login/register.html">Đăng ký ngay</a></p>
+            <p><a href="forgot_password.html">Quên mật khẩu?</a></p>
+        </div>
+    </div>
 
     <script>
         // Kiểm tra nếu có thông báo từ đăng ký
         const params = new URLSearchParams(window.location.search);
         if (params.has("success")) {
-            document.getElementById("message").innerHTML = "<p style='color: green;'>Đăng ký thành công! Hãy đăng nhập.</p>";
+            document.getElementById("message").innerHTML = "<p class='success-msg'>Đăng ký thành công! Hãy đăng nhập.</p>";
         }
     </script>
 </body>

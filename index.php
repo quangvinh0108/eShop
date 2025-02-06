@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ - Cửa hàng điện thoại</title>
-    <link rel="stylesheet" href="../frontend/style.css">
+    <link rel="stylesheet" href="frontend/style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -48,7 +48,7 @@ session_start();
                     </li>
                 <?php else: ?>
                     <!-- Nếu chưa đăng nhập -->
-                    <li><a href="login.php">Đăng nhập</a></li>
+                    <li><a href="frontend/login/login.html">Đăng nhập</a></li>
                 <?php endif; ?>
             </ul>
         </nav>
